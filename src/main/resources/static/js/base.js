@@ -219,6 +219,7 @@ class Path {
         if (pathValue !== undefined)
             console.warn(`the path "${path} already has a value of ${pathValue}"`)
         this.#path[rootSelector][path] = href;
+        console.log(this.#path);
     }
     static get(rootSelector, path){
         return this.#path[rootSelector][path];
@@ -253,10 +254,11 @@ class ClientAnchor extends HTMLAnchorElement {
   constructor(){
     super();
   }
-  connectedCallback(){
-    console.log("test");
+  onclick(){
+
   }
 }
 window.addEventListener("popstate", (evt) => {
     console.log(history.state, Path.path);
 });
+customElements.define("client-anchor", ClientAnchor, {extends:"a"});
