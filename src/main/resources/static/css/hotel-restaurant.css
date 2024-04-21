@@ -1,3 +1,39 @@
 #cover {
   background:transparent url("/media/image/cover.jpg") top center / cover no-repeat;
 }
+#cover-details{
+  min-height:calc(var(--body-h) - (var(--logo-frame-h) - var(--header-h)));
+  display:grid;
+  grid-template-rows:
+    [cd-content] minmax(0, auto) 
+    [cd-nav] minmax(calc(var(--body-h) * 0.166), min-content);
+}
+#cd-content{
+  grid-row:cd-content;
+}
+#cd-heading{
+  display:inline-flex;
+  flex-direction: column;
+  font-size:calc(1.4rem + 1.4vh);
+  text-align:left;
+}
+#cd-heading-welcome{
+}
+#cd-heading-strong{
+  margin:0;
+  font-size:1em;
+}
+#cd-heading-restaurant{
+  align-self:flex-end;
+}
+#cd-description{
+  width:min-content;
+  min-width:18%;
+}
+#cd-nav{
+  grid-row:cd-nav;
+}
+#booking-nav{
+  display:flex;
+  justify-content: center;
+}

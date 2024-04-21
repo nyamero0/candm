@@ -29,7 +29,7 @@
     height:calc(var(--logo-frame-h) - var(--header-h));
 }
 #page-heading{
-    margin-left:var(--header-pad-x);
+    margin-left:calc(var(--header-pad-x) * 0.66);
     margin-right: auto;
     min-height:var(--header-content-h);
     display:flex;
@@ -84,9 +84,3 @@
     border-bottom-color: whitesmoke;
     text-shadow: 0 0 0 rgb(var(--fg-rgb-color));
 }
-#cover-details{
-  min-height:calc(var(--body-h) - (var(--logo-frame-h) - var(--header-h)));
-  display:grid;
-  grid-template-rows:[cd-content] minmax(0, auto) [cd-nav] minmax(calc(var(--body-h) * 0.155), min-content);
-}
-
